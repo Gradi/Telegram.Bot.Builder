@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26124.0
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Telegram.Bot.Builder", "Telegram.Bot.Builder\Telegram.Bot.Builder.csproj", "{89C87F32-481C-4C63-A77D-9D2BFCF5504F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{15794ECD-F254-48B0-B178-C748212897C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Telegram.Bot.Builder", "Tests\Test.Telegram.Bot.Builder\Test.Telegram.Bot.Builder.csproj", "{07ADC199-9475-43DC-A443-87730250248A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89C87F32-481C-4C63-A77D-9D2BFCF5504F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89C87F32-481C-4C63-A77D-9D2BFCF5504F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89C87F32-481C-4C63-A77D-9D2BFCF5504F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89C87F32-481C-4C63-A77D-9D2BFCF5504F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07ADC199-9475-43DC-A443-87730250248A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07ADC199-9475-43DC-A443-87730250248A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07ADC199-9475-43DC-A443-87730250248A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07ADC199-9475-43DC-A443-87730250248A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{07ADC199-9475-43DC-A443-87730250248A} = {15794ECD-F254-48B0-B178-C748212897C2}
+	EndGlobalSection
+EndGlobal
