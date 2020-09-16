@@ -2,6 +2,9 @@ using System;
 
 namespace Telegram.Bot.Builder.Controllers.Attributes
 {
+    /// <summary>
+    /// Use this attribute for setting different command name for controller or method.
+    /// </summary>
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = false, Inherited = false)]
     public class CommandAttribute : Attribute
     {

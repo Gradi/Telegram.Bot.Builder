@@ -8,18 +8,37 @@ using Telegram.Bot.Builder.Extensions;
 
 namespace Telegram.Bot.Builder.Controllers.Descriptors
 {
+    /// <summary>
+    /// Descriptor that describes controller.
+    /// </summary>
     public class ControllerDescriptor
     {
         private readonly IReadOnlyDictionary<string, ActionDescriptor> _actionsByName;
 
+        /// <summary>
+        /// Name of a controller. It is either name from <see cref="CommandAttribute"/> or
+        /// name of controller itself without ending 'Controller' word.
+        /// </summary>
         public string Name { get; }
 
+        /// <summary>
+        /// Type of a controller.
+        /// </summary>
         public Type Type { get; }
 
+        /// <summary>
+        /// Collection of actions of controller.
+        /// </summary>
         public IReadOnlyCollection<ActionDescriptor> Actions { get; }
 
+        /// <summary>
+        /// Default action of a controller (if any).
+        /// </summary>
         public ActionDescriptor? DefaultAction { get; }
 
+        /// <summary>
+        /// Collection of filters this controller marked with.
+        /// </summary>
         public IReadOnlyCollection<Type> Filters { get; }
 
         internal ControllerDescriptor
@@ -51,6 +70,9 @@ namespace Telegram.Bot.Builder.Controllers.Descriptors
         public override string ToString() =>
             $"{Type.Name} {{{string.Join(", ", Actions.Select(a => a.Method.Name))}}}";
 
+        /// <summary>
+        /// Returns collection of controller types from <paramref name="assembly"/>.
+        /// </summary>
         public static IEnumerable<Type> GetControllers(Assembly assembly)
         {
             return assembly

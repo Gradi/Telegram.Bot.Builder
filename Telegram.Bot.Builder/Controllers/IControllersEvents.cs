@@ -2,10 +2,16 @@ using System;
 using System.Threading.Tasks;
 using Telegram.Bot.Builder.Controllers.Descriptors;
 using Telegram.Bot.Builder.Controllers.Filters;
+using Telegram.Bot.Builder.Extensions;
 using Telegram.Bot.Builder.UpdateHandling;
 
 namespace Telegram.Bot.Builder.Controllers
 {
+    /// <summary>
+    /// Interface that accepts events during handling update by controllers during different stages.
+    /// Default implementation does nothing.
+    /// Add your implementation before calling 'AddControllersServices()'
+    /// </summary>
     public interface IControllersEvents
     {
         Task<bool> OnUpdateArrival(UpdateContext context);

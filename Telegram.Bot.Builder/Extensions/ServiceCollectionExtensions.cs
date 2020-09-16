@@ -68,13 +68,13 @@ namespace Telegram.Bot.Builder.Extensions
         /// <summary>
         /// Adds services required for controllers.
         /// </summary>
-        public static IServiceCollection AddContollersServices(this IServiceCollection services) =>
-            services.AddContollersServices(_ => {});
+        public static IServiceCollection AddControllersServices(this IServiceCollection services) =>
+            services.AddControllersServices(_ => {});
 
         /// <summary>
         /// Adds services required for controllers.
         /// </summary>
-        public static IServiceCollection AddContollersServices(this IServiceCollection services, Action<ControllerOptions> configureDelegate)
+        public static IServiceCollection AddControllersServices(this IServiceCollection services, Action<ControllerOptions> configureDelegate)
         {
             services.Configure<ControllerOptions>(configureDelegate);
 

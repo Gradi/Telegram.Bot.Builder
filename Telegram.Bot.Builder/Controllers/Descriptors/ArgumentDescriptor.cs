@@ -8,12 +8,24 @@ using Telegram.Bot.Builder.Controllers.Binders;
 
 namespace Telegram.Bot.Builder.Controllers.Descriptors
 {
+    /// <summary>
+    /// Describes single argument from controller's action.
+    /// </summary>
     public class ArgumentDescriptor
     {
+        /// <summary>
+        /// Parameter info.
+        /// </summary>
         public ParameterInfo Parameter { get; }
 
+        /// <summary>
+        /// Implementation of <see cref="IBinder"/> that is capable of binding this argument.
+        /// </summary>
         public IBinder Binder { get; }
 
+        /// <summary>
+        /// Action this argument belongs to.
+        /// </summary>
         public ActionDescriptor Action { get; }
 
          internal ArgumentDescriptor

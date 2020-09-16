@@ -6,6 +6,10 @@ using Telegram.Bot.Types.Payments;
 
 namespace Telegram.Bot.Builder.UpdateHandling
 {
+    /// <summary>
+    /// Basic implementation of <see cref="IUpdateHandler"/> that
+    /// distinguishes different kinds of updates.
+    /// </summary>
     public abstract class BaseUpdateHandler : IUpdateHandler
     {
         public virtual Task HandleAsync(UpdateContext context, Func<UpdateContext, Task> next)

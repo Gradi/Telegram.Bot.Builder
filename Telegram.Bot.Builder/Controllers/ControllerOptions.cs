@@ -6,14 +6,28 @@ using Telegram.Bot.Builder.Controllers.Filters;
 
 namespace Telegram.Bot.Builder.Controllers
 {
+    /// <summary>
+    /// Options for controllers.
+    /// </summary>
     public class ControllerOptions
     {
         private readonly List<Type> _filters;
 
+        /// <summary>
+        /// Collection of binders.
+        /// By default, it starts with binders for standard C# types (strings, char, bool, numbers);
+        /// </summary>
         public IBinderCollection Binders { get; }
 
+        /// <summary>
+        /// Collection of registered filters.
+        /// </summary>
         public IReadOnlyCollection<Type> Filters => _filters;
 
+        /// <summary>
+        /// Collection of assemblies that contain controllers.
+        /// By default this collection starts with entry assembly.
+        /// </summary>
         public ICollection<Assembly> ControllerAssemblies { get; }
 
         public ControllerOptions()
@@ -30,6 +44,10 @@ namespace Telegram.Bot.Builder.Controllers
             AddDefaultBinders();
         }
 
+        /// <summary>
+        /// Adds filter to global list of filters.
+        /// Dependency injection will be used to retrieve instance.
+        /// </summary>
         public ControllerOptions AddFilter<T>() where T : class, IFilter
         {
             _filters.Add(typeof(T));
