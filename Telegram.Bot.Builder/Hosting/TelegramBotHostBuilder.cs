@@ -5,7 +5,7 @@ using Telegram.Bot.Builder.UpdateListening;
 
 namespace Telegram.Bot.Builder.Hosting
 {
-    public class TelegramBotHostBuilder : ITelegramBotHostBuilder
+    internal class TelegramBotHostBuilder : ITelegramBotHostBuilder
     {
         private readonly IHostBuilder _hostBuilder;
 

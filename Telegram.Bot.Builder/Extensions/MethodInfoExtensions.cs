@@ -4,7 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Telegram.Bot.Builder.Extensions
 {
-    public static class MethodInfoExtensions
+    internal static class MethodInfoExtensions
     {
         /// <summary>
         /// Invokes method and returns it's result (if any).

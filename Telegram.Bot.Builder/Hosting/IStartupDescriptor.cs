@@ -3,7 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Telegram.Bot.Builder.Hosting
 {
-    public interface IStartupDescriptor
+    internal interface IStartupDescriptor
     {
         Type Type { get; }
 

@@ -1,5 +1,6 @@
 using System;
 using System.Threading.Tasks;
+using Telegram.Bot.Builder.Controllers;
 using Telegram.Bot.Builder.Hosting;
 using Telegram.Bot.Builder.UpdateHandling;
 
@@ -26,6 +27,12 @@ namespace Telegram.Bot.Builder.Extensions
             if (builder == null) throw new ArgumentNullException(nameof(builder));
 
             return builder.Use(new FuncUpdateHandler(handler));
+        }
+
+        public static IApplicationBuilder UseControllers(this IApplicationBuilder builder)
+        {
+            builder.Use<ControllersUpdateHandler>();
+            return builder;
         }
     }
 }
