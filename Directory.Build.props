@@ -1,12 +1,26 @@
 <Project>
 
   <PropertyGroup>
+
     <Platforms>AnyCPU</Platforms>
     <Nullable>enable</Nullable>
     <LangVersion>preview</LangVersion>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <!-- Warnings about missing comments -->
     <NoWarn>CS1591;$(NoWarn)</NoWarn>
+
+    <Authors />
+    <Copyright>2020</Copyright>
+    <PackageProjectUrl>https://github.com/Gradi/Telegram.Bot.Builder</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Gradi/Telegram.Bot.Builder</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <IsPackable>true</IsPackable>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)/LICENSE" Pack="true" PackagePath="" />
+  </ItemGroup>
 
 </Project>

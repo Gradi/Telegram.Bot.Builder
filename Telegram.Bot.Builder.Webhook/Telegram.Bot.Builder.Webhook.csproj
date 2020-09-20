@@ -1,8 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
-  
+
   <PropertyGroup>
     <Version>1.0.0</Version>
-    
+
+    <Description>Helper library for Telegram.Bot.Builder which allows to use webhooks for accepting incoming updates.</Description>
+
     <OutputType>Library</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <NoWarn>CS1570;$(NoWarn)</NoWarn>
@@ -15,7 +17,7 @@
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <Content Remove="thirdparty/**" />
   </ItemGroup>
@@ -27,16 +29,16 @@
   <ItemGroup>
     <Compile Remove="thirdparty/**" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <Compile Include="thirdparty/bouncycastle-csharp/crypto/bzip2/src/**/*.cs">
       <Visible>false</Visible>
     </Compile>
-    
+
     <Compile Include="thirdparty/bouncycastle-csharp/crypto/src/**/*.cs">
       <Visible>false</Visible>
     </Compile>
-    
+
     <Compile Remove="thirdparty/bouncycastle-csharp/crypto/src/AssemblyInfo.cs" />
     <Compile Remove="thirdparty/bouncycastle-csharp/crypto/src/asn1/util/Dump.cs" />
   </ItemGroup>
