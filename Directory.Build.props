@@ -1,6 +1,7 @@
 <Project>
 
   <PropertyGroup>
+    <Platforms>AnyCPU</Platforms>
     <Nullable>enable</Nullable>
     <LangVersion>preview</LangVersion>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>

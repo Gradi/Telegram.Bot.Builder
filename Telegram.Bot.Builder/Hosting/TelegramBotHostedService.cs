@@ -110,11 +110,11 @@ namespace Telegram.Bot.Builder.Hosting
                     {
                         await _updateHandler.HandleAsync(CreateContext(args), scope.ServiceProvider, _ => Task.CompletedTask);
                     }
-                    _logger.LogTrace("Handled update in {UpdateHandleTime}", stopwatch.Elapsed);
+                    _logger.LogTrace("Handled update in \"{UpdateHandleTime}\"", stopwatch.Elapsed);
                 }
                 catch(Exception exception)
                 {
-                    _logger.LogError(exception, "Error occurred on update handling after {UpdateHandleTime}", stopwatch.Elapsed);
+                    _logger.LogError(exception, "Error occurred on update handling after \"{UpdateHandleTime}\"", stopwatch.Elapsed);
                 }
                 finally
                 {

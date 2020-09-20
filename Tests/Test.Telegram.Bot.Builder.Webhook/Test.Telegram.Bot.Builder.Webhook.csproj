@@ -3,7 +3,7 @@
   <Import Project="../Tests.props" />
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Telegram.Bot.Builder\Telegram.Bot.Builder.csproj" />
+    <ProjectReference Include="..\..\Telegram.Bot.Builder.Webhook\Telegram.Bot.Builder.Webhook.csproj" />
   </ItemGroup>
 
 </Project>

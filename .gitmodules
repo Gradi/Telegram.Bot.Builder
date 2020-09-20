@@ -1,0 +1,3 @@
+[submodule "Telegram.Bot.Builder.Webhook/thirdparty/bouncycastle-csharp"]
+	path = Telegram.Bot.Builder.Webhook/thirdparty/bouncycastle-csharp
+	url = git@github.com:bcgit/bc-csharp.git
