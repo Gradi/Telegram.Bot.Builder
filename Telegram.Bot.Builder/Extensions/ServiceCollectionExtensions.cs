@@ -39,11 +39,11 @@ namespace Telegram.Bot.Builder.Extensions
         }
 
         /// <summary>
-        /// Adds filters to service collection.
+        /// Adds filter types to service collection.
         /// </summary>
         /// <param name="services">Service collection.</param>
         /// <param name="lifetime">Filters lfietime.</param>
-        /// <param name="assemblies">Optional. Collection of assemblies to scan for controllers Is null or empty then entry assembly is searched for filters types.</param>
+        /// <param name="assemblies">Optional. Collection of assemblies to scan for filters. If null or empty then entry assembly is searched for filters types.</param>
         /// <exception cref="Exception">If <paramref name="assemblies"/> collection is null or emptry and can't get entry assembly.</exception>
         public static IServiceCollection AddFilters(this IServiceCollection services, ServiceLifetime lifetime = ServiceLifetime.Scoped, params Assembly[]? assemblies)
         {

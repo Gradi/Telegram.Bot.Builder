@@ -1,5 +1,6 @@
 using System;
 using Telegram.Bot.Builder.Controllers.Descriptors;
+using Telegram.Bot.Builder.UpdateHandling;
 
 namespace Telegram.Bot.Builder.Controllers.Filters
 {
@@ -29,6 +30,11 @@ namespace Telegram.Bot.Builder.Controllers.Filters
         public Controller Controller { get; }
 
         /// <summary>
+        /// Update context
+        /// </summary>
+        public UpdateContext UpdateContext { get; }
+
+        /// <summary>
         /// Set this flag to cancel action invocation.
         /// </summary>
         public bool IsCanceled { get; set; }
@@ -42,12 +48,14 @@ namespace Telegram.Bot.Builder.Controllers.Filters
             (
                 ActionDescriptor actionDescriptor,
                 object[] arguments,
-                Controller controller
+                Controller controller,
+                UpdateContext updateContext
             )
         {
             Action = actionDescriptor;
             Arguments = arguments;
             Controller = controller;
+            UpdateContext = updateContext;
             IsCanceled = false;
             Exception = null;
         }

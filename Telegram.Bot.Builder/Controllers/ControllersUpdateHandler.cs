@@ -121,7 +121,8 @@ namespace Telegram.Bot.Builder.Controllers
 
         private async Task<bool> InvokeAction(UpdateContext context, ActionDescriptor action, object[] arguments)
         {
-            var controllerContext = new ControllerContext(action, arguments, (Controller)_services.GetRequiredService(action.Controller.Type));
+            var controllerContext = new ControllerContext(action, arguments, (Controller)_services.GetRequiredService(action.Controller.Type),
+                                                          context);
             controllerContext.Controller.Setup(context);
             var filters = GetFilters(action);
 
